@@ -15,7 +15,7 @@ import com.example.drawermenu.ui.navigation.Destination
 
 @Composable
 fun DrawerMenu(currentRoute: String?, onNavigate: (Destination) -> Unit) {
-    ModalDrawerSheet {
+    ModalDrawerSheet { //panell de fons sobre el qual es dibuixa el menú lateral (contenidor).
         Spacer(Modifier.height(16.dp))
         Text(text = "Menú", modifier = Modifier.padding(16.dp))
 

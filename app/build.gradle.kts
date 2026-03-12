@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     // AFEGEIX AQUESTA LÍNIA:
     id("org.jetbrains.kotlin.plugin.serialization")
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -39,6 +40,9 @@ android {
     buildFeatures {
         compose = true
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -53,6 +57,7 @@ dependencies {
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.compose.navigation)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.core.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
